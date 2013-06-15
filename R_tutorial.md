@@ -395,3 +395,5 @@ Creating nice plots in R is fairly straightforward. The plot(x,y) function by de
  > plot(a, b)</code></pre>
 
 There are lots of pretty incredible graphing packages for R: in my opinion <a href="http://ggplot2.org/">ggplot2</a> and <a href="http://cran.r-project.org/web/packages/lattice/index.html">lattice</a> are two of the best.  There's also a lot of applications which will help you present your R figures online (such as<a href="http://www.rstudio.com/shiny/"> shiny</a>) or render documentation (such as <a href="http://yihui.name/knitr/">knitr</a>).
+
+I like this <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R Cheat Sheet from the R-project website</a>. 
