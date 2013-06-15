@@ -351,11 +351,11 @@ What if we want to create a function that squares things as a default but can ta
 Because we have defined y to have the default value of 2, the power function will square our x argument unless otherwise specified, for example:
 
 <pre><code>> power(5) #does the same thing as our square function
-[1] 25
-> power(5,3) #cubes 5
-[1] 125
-> power(y=0.5, x=25) #takes the square root of 25
-[1] 5</code></pre>
+ [1] 25
+ > power(5,3) #cubes 5
+ [1] 125
+ > power(y=0.5, x=25) #takes the square root of 25
+ [1] 5</code></pre>
 
 Notice in the above example, when we don’t specify the order of the arguments, R will automatically go in order (i.e., x first, y second). However, we can go out of order if we define the arguments in the function (i.e. x= and y=).
 
@@ -366,21 +366,21 @@ Loops are very handy when you want to run an operation multiple times, for examp
 Before actually writing the loop part of our 'for loop', we need to create a place to store the results in, a vector for example. Then to write the for loop we must call the for() function. We will be running an operation over many time steps, so we need a ’counter’ or index for the current location, here we will use i, we also need to tell R where it is starting the index and were it is ending. All of this information goes within the ROUND brackets. With for loops we also use CURLY brackets after the round brackets to define the operation the loop will execute.
 
 <pre><code>for(i in starting:ending){
-result.vector[i]=operation
-} #end of for loop</code></pre>
+ result.vector[i]=operation
+ } #end of for loop</code></pre>
 
 For example, if we want to take 4 to increasingly higher powers we would write a loop as follows:
 
 <pre><code>> IT=5 #number of times we want our loop to do the operation
-> p=seq(3,7,by=1) #a vector of powers we are going to take 4 too.
-> result=rep(NA, length=IT) #create an empty vector to store the results in
-> for(i in 1:5){ #tell our loop that it is going to start with i=1 and count up
-+ #(by whole numbers) until i=5
-+ result[i]=4ˆp[i] #stores the result of the calculation in the i'th place in
-+ # our result
-+ #vector, e.g. result[1]=4ˆp[1] or 4ˆ3
-+ } #end of for loop
-> result
+ > p=seq(3,7,by=1) #a vector of powers we are going to take 4 too.
+ > result=rep(NA, length=IT) #create an empty vector to store the results in
+ > for(i in 1:5){ #tell our loop that it is going to start with i=1 and count up
+ + #(by whole numbers) until i=5
+ + result[i]=4ˆp[i] #stores the result of the calculation in the i'th place in
+ + # our result
+ + #vector, e.g. result[1]=4ˆp[1] or 4ˆ3
+ + } #end of for loop
+ > result
 
 [1]    64   256  1024  4096 16384
 </code></pre>
@@ -391,7 +391,7 @@ In the previous example, the loop sets i to be equal to 1 then 2 etc until i is 
 
 Creating nice plots in R is fairly straightforward. The plot(x,y) function by default plots a scatterplot of points, but it is quite flexible and easy to manipulate. NOTE: your x and y vectors MUST be the same length. For example:
 <pre><code>> a = 1:10
-\> b = seq(1, 100, length = 10)
-\> plot(a, b)</code></pre>
+ > b = seq(1, 100, length = 10)
+ > plot(a, b)</code></pre>
 
 There are lots of pretty incredible graphing packages for R: in my opinion <a href="http://ggplot2.org/">ggplot2</a> and <a href="http://cran.r-project.org/web/packages/lattice/index.html">lattice</a> are two of the best.  There's also a lot of applications which will help you present your R figures online (such as<a href="http://www.rstudio.com/shiny/"> shiny</a>) or render documentation (such as <a href="http://yihui.name/knitr/">knitr</a>).
