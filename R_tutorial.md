@@ -91,14 +91,14 @@ R will of course do math operations (such as +, -, /, *), you can save the outpu
 Once a variable is assigned you can call them when doing operations, for example:
 
 <pre><code>> ab = b/a 
-> ab
-[1] 33.6</code></pre>
+ > ab
+ [1] 33.6</code></pre>
 
 <h3>Built-in R functions</h3>
 
 R has many functions that come with the program. To use a function we call the function name and then use ROUND brackets. For example if we want to see the list of ’objects’ that we have created we use the ls( ) function:
 
-<pre><code>> ls()
+<pre><code>> ls( )
 [1] "a"  "ab" "b"</code></pre>
 
 Many functions take arguments, or information on the operation of interest. For example if we want to take the natural log of ’a’ we use the function log():
@@ -208,11 +208,11 @@ We can assign a new value, such as 1 to a subset of a vector:
 Once we have created a vector we can do arithmetic on it element-by-element, for example:
 
 <pre><code>> a = 1:10 > b = 3:12 
-> a+2
-[1] 3 4 5 6 7 8 9 10 11 12</code></pre>
+ > a+2
+ [1] 3 4 5 6 7 8 9 10 11 12</code></pre>
 
 <pre><code>> a+b
-[1] 4 6 8 10 12 14 16 18 20 22</code></pre>
+ [1] 4 6 8 10 12 14 16 18 20 22</code></pre>
 
 Most of the math operation functions (i.e., exp, log, etc) are written such that they work element-by-element as well:
 <pre><code>> exp(a)  # exponential of a
@@ -247,7 +247,7 @@ To change the working directory in RStudio (both Macs and PCs): Go to the ”Too
 
 Another way to make sure that R finds the file is to give R the entire file path name when we load the file into R, just like we would do when working at the command line.
 
-Example: We can load the expData.csv file into R using the read.csv() function as follows:
+Example: We can load the expData.csv file into R using the read.csv( ) function as follows:
 <pre><code>> dat=read.csv("expData.csv") # use when the working directory is the same as the location of the file</code></pre> 
 <pre><code>> dat
     times expVal
@@ -284,7 +284,7 @@ We can also call sequences of rows or columns.
      time   expVal
 6    6 403.4288</code></pre>
 
-<pre><code>> dat[ ,1] #calls column1, all rows (the , separates the row indicator from the column one) 
+<pre><code>> dat[ ,1] #calls column1, all rows (the "," separates the row indicator from the column one) 
 [1] 1 2 3 4 5 6 7 8 9 10 </code></pre>
 
 Because dataframes have column names we can also subset the dataset using those. We do this using the $ operator, for example:
