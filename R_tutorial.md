@@ -25,7 +25,7 @@ Some personal recommendations to avoid writing bad code:
 <h3>Important Symbols and Commands</h3>
 Below are a few of the basic symbols that are seen in the R environment and used frequently.
 
-<h3>Table 1 - Important R Symbols</h3>
+<h4>Table 1 - Important R Symbols</h4>
 
 | Symbol        | Meaning / Use  |
 |:-------------:|:--------------:|
