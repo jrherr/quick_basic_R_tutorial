@@ -4,6 +4,8 @@
 
 Please see the main web-page of R - <a href="http://www.r-project.org">r-project.org</a> - to download R if you don't already have it.  At the R website you can download installation files for Apple Mac OS X, Microsoft Windows PC, and lots of flavors of Linux. Once you have downloaded the installation file then run the file by clicking on it. You should be able to access the R-GUI (graphical user interface) on your computer.
 
+As a reference for the many commands you will come across using R, I like this <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R Cheat Sheet from the R-project website</a>.
+
 <h4>Writing &amp; Saving Code</h4>
 
 On PCs, you can use the built in R editor but it doesn’t give you any help with writing your code.
@@ -101,7 +103,7 @@ R has many functions that come with the program. To use a function we call the f
 <pre><code>> ls( )
 [1] "a"  "ab" "b"</code></pre>
 
-Many functions take arguments, or information on the operation of interest. For example if we want to take the natural log of ’a’ we use the function log():
+Many functions take arguments, or information on the operation of interest. For example if we want to take the natural log of ’a’ we use the function log( ):
 
 <pre><code>> log(a)
 [1] 1.609438</code></pre>
@@ -191,14 +193,14 @@ You can take pieces of a vector by using SQUARE brackets:
 
 <pre><code>> g>10  # logical vector
 [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE
-[13]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
+[13] TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
 
 <pre><code>> g[g>10]  # just the elements in g that are greater than 10
 [1] 10.5 11.0 11.5 12.0 12.5 13.0 13.5 14.0 14.5 15.0 15.5 16.0</code></pre>
 
 We can assign a new value, such as 1 to a subset of a vector: 
 
-<pre><code>> d[d /< 5] = 1</code></pre>
+<pre><code>> d[d < 5] = 1</code></pre>
 
 <pre><code>>d
 [1] 1 1 1 1 5 6 7 8 9 10</code></pre>
@@ -208,24 +210,24 @@ We can assign a new value, such as 1 to a subset of a vector:
 Once we have created a vector we can do arithmetic on it element-by-element, for example:
 
 <pre><code>> a = 1:10 > b = 3:12 
- > a+2
- [1] 3 4 5 6 7 8 9 10 11 12</code></pre>
+> a+2
+[1] 3 4 5 6 7 8 9 10 11 12</code></pre>
 
 <pre><code>> a+b
- [1] 4 6 8 10 12 14 16 18 20 22</code></pre>
+[1] 4 6 8 10 12 14 16 18 20 22</code></pre>
 
 Most of the math operation functions (i.e., exp, log, etc) are written such that they work element-by-element as well:
 <pre><code>> exp(a)  # exponential of a
- [1]     2.718282     7.389056    20.085537    54.598150   148.413159
- [6]   403.428793  1096.633158  2980.957987  8103.083928 22026.465795</code></pre>
+[1]     2.718282     7.389056    20.085537    54.598150   148.413159
+[6]   403.428793  1096.633158  2980.957987  8103.083928 22026.465795</code></pre>
 
 <pre><code>> log10(b)  # log base 10 of b
- [1] 0.4771213 0.6020600 0.6989700 0.7781513 0.8450980 0.9030900 0.9542425
- [8] 1.0000000 1.0413927 1.0791812</code></pre>
+[1] 0.4771213 0.6020600 0.6989700 0.7781513 0.8450980 0.9030900 0.9542425
+[8] 1.0000000 1.0413927 1.0791812</code></pre>
 
 <pre><code>> log(a,base=2)  # log with base 2, you can do logarithms with any base
- [1] 0.000000 1.000000 1.584963 2.000000 2.321928 2.584963 2.807355 3.000000
- [9] 3.169925 3.321928</code></pre>
+[1] 0.000000 1.000000 1.584963 2.000000 2.321928 2.584963 2.807355 3.000000
+[9] 3.169925 3.321928</code></pre>
 
 The latter example is a demonstration of how functions have default values. For the function log the default is a natural log, however we can ask it to calculate log with any base by defining the base when we call the log( ) function. To check on the default values of functions in R you can use help - ?() - which is similar to the "man" command when you are at the command line.
 
@@ -394,6 +396,4 @@ Creating nice plots in R is fairly straightforward. The plot(x,y) function by de
  > b = seq(1, 100, length = 10)
  > plot(a, b)</code></pre>
 
-There are lots of pretty incredible graphing packages for R: in my opinion <a href="http://ggplot2.org/">ggplot2</a> and <a href="http://cran.r-project.org/web/packages/lattice/index.html">lattice</a> are two of the best.  There's also a lot of applications which will help you present your R figures online (such as<a href="http://www.rstudio.com/shiny/"> shiny</a>) or render documentation (such as <a href="http://yihui.name/knitr/">knitr</a>).
-
-I like this <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R Cheat Sheet from the R-project website</a>. 
+There are lots of pretty incredible graphing packages for R: in my opinion <a href="http://ggplot2.org/">ggplot2</a> and <a href="http://cran.r-project.org/web/packages/lattice/index.html">lattice</a> are two of the best.  There's also a lot of applications which will help you present your R figures online (such as<a href="http://www.rstudio.com/shiny/"> shiny</a>) or render documentation (such as <a href="http://yihui.name/knitr/">knitr</a>). 
