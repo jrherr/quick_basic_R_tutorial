@@ -93,8 +93,8 @@ R will of course do math operations (such as +, -, /, *), you can save the outpu
 Once a variable is assigned you can call them when doing operations, for example:
 
 <pre><code>> ab = b/a 
- > ab
- [1] 33.6</code></pre>
+> ab
+[1] 33.6</code></pre>
 
 <h3>Built-in R functions</h3>
 
