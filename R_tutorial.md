@@ -279,10 +279,10 @@ As with vectors when we want to call only part of a dataframe we can do it by us
 
 We can also call sequences of rows or columns.
 
-<pre><code>> dat[1:3 ,2] #Calls rows 1, 2 and 3, second column
+<pre><code>> dat[1:3 ,2] # Calls rows 1, 2 and 3, second column
 [1]  2.718282  7.389056 20.085537</code></pre>
 
-<pre><code>> dat[6, ] #calls row 6, all columns
+<pre><code>> dat[6, ] # calls row 6, all columns
      time   expVal
 6    6 403.4288</code></pre>
 
@@ -319,9 +319,9 @@ Writing functions in R is very useful when the task you wish to accomplish is no
 
 The first step in writing a function is to define the function and what it will do. This is accomplished by using the 'function( )' function. Inside the ROUND brackets we define the arguments our function will take. Inside the CURLY brackets we define the operation the function will be performing, and what we want the function to tell us, such that:
 
-<pre><code>name=function(x, y){ #this function would have 2 arguments
-z=operation #here we are telling the function what to do
-return(z) #return tells R what to give us back once it has run the function
+<pre><code>name=function(x, y){ # this function would have 2 arguments
+z=operation # here we are telling the function what to do
+return(z) # return tells R what to give us back once it has run the function
 }</code></pre>
 
 NOTE: When R is running an operation inside a function, it CANNOT "see" objects that you have defined outside the function. Similarly, when you are outside a function, R cannot "see" objects created inside a function UNLESS you tell it to return them at the end of the function.
@@ -332,9 +332,9 @@ Once the function is written, we can have it perform the operations by calling i
 
 If we want to create a function that squares things for us we do the following:
 
-<pre><code>> square=function(x){ #name our function and define one argument
-+         res=xˆ2 #operation the function will perform when called
-+         return(res) #the information we want back
+<pre><code>> square=function(x){ # name our function and define one argument
++         res=xˆ2 # operation the function will perform when called
++         return(res) # the information we want back
 + } #end of function</code></pre>
 
 Now that our ”square” function is created we can call it as follows:
@@ -344,19 +344,19 @@ Now that our ”square” function is created we can call it as follows:
 
 What if we want to create a function that squares things as a default but can take things to other powers as well? We can do this with just a few modifications on our square function. We will call our new function power.
 
-<pre><code>> power=function(x,y=2){ #name our function and define two arguments,
+<pre><code>> power=function(x,y=2){ # name our function and define two arguments,
 + #y has the default value of 2
-+         res2=xˆy #operation the function will perform when called
-+         return(res2) #the information we want back
-+ } #end of function</code></pre>
++         res2=xˆy # operation the function will perform when called
++         return(res2) # the information we want back
++ } # end of function</code></pre>
 
 Because we have defined y to have the default value of 2, the power function will square our x argument unless otherwise specified, for example:
 
-<pre><code>> power(5) #does the same thing as our square function
+<pre><code>> power(5) # does the same thing as our square function
  [1] 25
- > power(5,3) #cubes 5
+ > power(5,3) # cubes 5
  [1] 125
- > power(y=0.5, x=25) #takes the square root of 25
+ > power(y=0.5, x=25) # takes the square root of 25
  [1] 5</code></pre>
 
 Notice in the above example, when we don’t specify the order of the arguments, R will automatically go in order (i.e., x first, y second). However, we can go out of order if we define the arguments in the function (i.e. x= and y=).
@@ -373,15 +373,15 @@ Before actually writing the loop part of our 'for loop', we need to create a pla
 
 For example, if we want to take 4 to increasingly higher powers we would write a loop as follows:
 
-<pre><code>> IT=5 #number of times we want our loop to do the operation
- > p=seq(3,7,by=1) #a vector of powers we are going to take 4 too.
- > result=rep(NA, length=IT) #create an empty vector to store the results in
- > for(i in 1:5){ #tell our loop that it is going to start with i=1 and count up
+<pre><code>> IT=5 # number of times we want our loop to do the operation
+ > p=seq(3,7,by=1) # a vector of powers we are going to take 4 too.
+ > result=rep(NA, length=IT) # create an empty vector to store the results in
+ > for(i in 1:5){ # tell our loop that it is going to start with i=1 and count up
  + #(by whole numbers) until i=5
- + result[i]=4ˆp[i] #stores the result of the calculation in the i'th place in
+ + result[i]=4ˆp[i] # stores the result of the calculation in the i'th place in
  + # our result
  + #vector, e.g. result[1]=4ˆp[1] or 4ˆ3
- + } #end of for loop
+ + } # end of for loop
  > result
 
 [1]    64   256  1024  4096 16384
